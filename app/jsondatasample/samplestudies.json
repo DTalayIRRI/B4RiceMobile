@@ -1,0 +1,13 @@
+ [
+    {
+   	  "id": "1",
+      "studyid": 1,
+      "studyname": "Test study01"
+    },
+    {
+    	"id": "2",
+      "studyid": 2,
+      "studyname": "Test study02"
+    }
+  
+]
