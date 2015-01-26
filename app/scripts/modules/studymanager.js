@@ -21,6 +21,21 @@ angular.module('BIMSDataCollection.controllers')
 
 
 		},
+		getAccount: function(){
+			var deferred = $q.defer();
+
+			POUCH.get('account', function(err, doc) { 
+				if(err){
+					deferred.reject(err);
+				} else{
+					deferred.resolve(doc);
+				}
+
+
+			});
+
+			return deferred.promise;
+		},
 		insertStudy: function(study){
 			var db = new PouchDB(DATABASE_NAME,{adapter : 'websql'});
 			db.put(study, function callback(err, result) {
